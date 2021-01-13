@@ -3,7 +3,7 @@
 
 # Systema Bibliotecario
 
-## Acerca de ...
+## Acerca de los modulos
 
 - Sistema de login, roles y sesiones.
 
