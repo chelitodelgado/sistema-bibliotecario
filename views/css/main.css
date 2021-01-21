@@ -67,6 +67,17 @@ body, html{
 	border-bottom: 2px solid #F7F7F7;
 	padding: 0;
 }
+
+.container-404, title-error, type-error {
+	background: #ccc;
+	color: #2A2D34;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 50px;
+	font-weight: bold;
+	justify-content: center;
+}
 /*============ LogIn*/
 .login-container{
 	height: 100%;
@@ -74,7 +85,7 @@ body, html{
 }
 .logInForm{
 	position: absolute;
-	color: #fff;
+	color: #fff !important;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -87,6 +98,12 @@ body, html{
 .logInForm p,
 .logInForm label{
 	color: #FFF;
+}
+
+input {
+	color: black !important;
+	font-family: 'Quicksand', sans-serif;
+	font-style: italic;
 }
 /*============ Partes del dashboard*/
 .dashboard-sideBar,

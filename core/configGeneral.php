@@ -4,5 +4,3 @@
     const COMMPANY = "Sistema bibliotecario";
     date_default_timezone_get('America/Mexico_City');
 
-
-?>

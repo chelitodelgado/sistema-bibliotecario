@@ -6,3 +6,4 @@
     $temple = new viewsController();
     $temple->getTempleController();
     
+    
