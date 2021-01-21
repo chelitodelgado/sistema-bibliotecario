@@ -8,6 +8,7 @@ if( $ajaxP ) {
 
 class adminController extends adminModel {
 
+    // Controlador para agregar administradores
     public function addAdminController() {
 
         $dni         = Main::clearString($_POST['dni-reg']);
@@ -137,7 +138,36 @@ class adminController extends adminModel {
 
     }
 
-    
+    // Sistema de paginación
+    public function paginadorAdminController( $pag, $reg, $role, $code ) {
+        
+        $pag   = Main::clearString($pag);
+        $reg   = Main::clearString($reg);
+        $role  = Main::clearString($role);
+        $code  = Main::clearString($code);
+        $tabla = "";
+
+        $pag   = ( isset($pag) && $pag > 0 ) ? (int) $pag : 1 ;
+        $index = ( $pag > 0) ? ( ($pag * $reg) - $reg ) : 0 ;
+
+        $conn  = Main::connect();
+        $query = $conn->query("
+            SELECT SQL_CALC_FOUND_ROWS * FROM admin 
+                WHERE CuentaCodigo != '$code' 
+                    AND id != 1 ORDER BY AdminNombre ASC LIMIT $index,$reg 
+        ");
+
+        $query = $query->fetchAll();
+
+        $total = $conn->query("SELECT FOUND_ROWS()");
+        $total = (int) $total->fetchColumn();
+
+        $nPag = ceil( ($total/$reg) );
+
+        return $tabla;
+    }
+
+
 
 
 }

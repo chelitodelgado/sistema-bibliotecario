@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="<?php ECHO SERVERURL; ?>views/favicon.ico" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="<?php ECHO SERVERURL; ?>views/css/main.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
     <?php include('views/modules/scripts.php') ?>
 </head>
 <body>

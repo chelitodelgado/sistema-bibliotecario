@@ -33,7 +33,7 @@
 		</div>
 		<div class="panel-body">
 			<div class="table-responsive">
-				<table class="table table-hover text-center">
+				<!-- <table class="table table-hover text-center">
 					<thead>
 						<tr>
 							<th class="text-center">#</th>
@@ -71,44 +71,36 @@
 								</form>
 							</td>
 						</tr>
+					</tbody>
+				</table> -->
+
+				<table id="example" class="display table table-hover text-center" style="width:100%">
+					<thead>
 						<tr>
-							<td>2</td>
+							<th class="text-center">DNI</th>
+							<th class="text-center">Nombre</th>
+							<th class="text-center">Teléfono</th>
+							<th class="text-center">Acción</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
 							<td>7890987651</td>
-							<td>Nombres</td>
-							<td>Apellidos</td>
+							<td>Angel Paredes Torres</td>
 							<td>Telefono</td>
 							<td>
-								<a href="#!" class="btn btn-success btn-raised btn-xs">
-									<i class="zmdi zmdi-refresh"></i>
-								</a>
-							</td>
-							<td>
-								<a href="#!" class="btn btn-success btn-raised btn-xs">
-									<i class="zmdi zmdi-refresh"></i>
-								</a>
-							</td>
-							<td>
-								<form>
-									<button type="submit" class="btn btn-danger btn-raised btn-xs">
-										<i class="zmdi zmdi-delete"></i>
-									</button>
-								</form>
+								<button class="btn btn-sm btn-warning"><i class="zmdi zmdi-account-add"></i></button>
 							</td>
 						</tr>
 					</tbody>
 				</table>
+
 			</div>
-			<nav class="text-center">
-				<ul class="pagination pagination-sm">
-					<li class="disabled"><a href="javascript:void(0)">«</a></li>
-					<li class="active"><a href="javascript:void(0)">1</a></li>
-					<li><a href="javascript:void(0)">2</a></li>
-					<li><a href="javascript:void(0)">3</a></li>
-					<li><a href="javascript:void(0)">4</a></li>
-					<li><a href="javascript:void(0)">5</a></li>
-					<li><a href="javascript:void(0)">»</a></li>
-				</ul>
-			</nav>
+
+			<script>
+			$(document).ready(function() {
+				$('#example').DataTable();
+			} );</script>
 		</div>
 	</div>
 </div>
